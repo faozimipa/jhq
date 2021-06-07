@@ -1,0 +1,49 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "id.zitech.base",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.10.5",
+    "applicationType": "monolith",
+    "baseName": "zitech",
+    "packageName": "id.zitech.base",
+    "packageFolder": "id/zitech/base",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "redis",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "messageBroker": false,
+    "buildTool": "maven",
+    "jwtSecretKey": "MjM0NjRhMmY5ZDkyMjkxNDExYmQxNzU4YWU0MTgxZDFiMjFiZGJkYTQ4Y2ZjNjY3YjY1MzU4OTcwNTI3MjVkYmYxZGEwZTAxMTE4ODIwYjIxY2VlMDNjMDQ1ODVmMjY1M2E5NTE3NjlmNDI4ZGE4M2M1ZjcyZjVhM2I4MzZkODk=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "cosmo",
+    "clientThemeVariant": "primary",
+    "creationTimestamp": 1623103076583,
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-quarkus",
+        "version": "1.1.1"
+      }
+    ],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": ["en"],
+    "blueprints": [
+      {
+        "name": "generator-jhipster-quarkus",
+        "version": "1.1.1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+version: '2'
+services:
+  zitech-app:
+    image: zitech
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://zitech-postgresql:5432/zitech
+      - JHIPSTER_CACHE_REDIS_SERVER=redis://zitech-redis:6379
+      - JHIPSTER_CACHE_REDIS_CLUSTER=false
+      # - JHIPSTER_CACHE_REDIS_SERVER=redis://zitech-redis:6379
+      # - JHIPSTER_CACHE_REDIS_CLUSTER=true
+      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+    ports:
+      - 8080:8080
+  zitech-postgresql:
+    extends:
+      file: postgresql.yml
+      service: zitech-postgresql
+  zitech-redis:
+    extends:
+      file: redis.yml
+      service: zitech-redis
