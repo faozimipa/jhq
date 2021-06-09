@@ -1,0 +1,24 @@
+{
+  "zitechApp": {
+    "sub": {
+      "home": {
+        "title": "Subs",
+        "createLabel": "Create a new Sub",
+        "createOrEditLabel": "Create or edit a Sub",
+        "notFound": "No Subs found"
+      },
+      "created": "A new Sub is created with identifier {{ param }}",
+      "updated": "A Sub is updated with identifier {{ param }}",
+      "deleted": "A Sub is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sub {{ id }}?"
+      },
+      "detail": {
+        "title": "Sub"
+      },
+      "subName": "Sub Name",
+      "code": "Code",
+      "category": "Category"
+    }
+  }
+}

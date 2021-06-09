@@ -8,6 +8,8 @@
       "entities": {
         "main": "Entities",
         "book": "Book",
+        "category": "Category",
+        "sub": "Sub",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

@@ -16,6 +16,14 @@ import passwordReset, { PasswordResetState } from 'app/modules/account/password-
 import book, {
   BookState
 } from 'app/entities/book/book.reducer';
+// prettier-ignore
+import category, {
+  CategoryState
+} from 'app/entities/category/category.reducer';
+// prettier-ignore
+import sub, {
+  SubState
+} from 'app/entities/sub/sub.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -30,6 +38,8 @@ export interface IRootState {
   readonly password: PasswordState;
   readonly settings: SettingsState;
   readonly book: BookState;
+  readonly category: CategoryState;
+  readonly sub: SubState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -46,6 +56,8 @@ const rootReducer = combineReducers<IRootState>({
   password,
   settings,
   book,
+  category,
+  sub,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar,
 });
