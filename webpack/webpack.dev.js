@@ -29,9 +29,9 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
       {
         test: /\.(sa|sc|c)ss$/,
         use: ['style-loader', 'css-loader', 'postcss-loader', {
-            loader: 'sass-loader',
-            options: { implementation: sass }
-          }
+          loader: 'sass-loader',
+          options: { implementation: sass }
+        }
         ]
       }
     ]
@@ -65,8 +65,8 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
     process.env.JHI_DISABLE_WEBPACK_LOGS
       ? null
       : new SimpleProgressWebpackPlugin({
-          format: options.stats === 'minimal' ? 'compact' : 'expanded'
-        }),
+        format: options.stats === 'minimal' ? 'compact' : 'expanded'
+      }),
     new FriendlyErrorsWebpackPlugin(),
     new BrowserSyncPlugin({
       https: options.tls,
@@ -74,9 +74,9 @@ module.exports = (options) => webpackMerge(commonConfig({ env: ENV }), {
       port: 9000,
       proxy: {
         target: `http${options.tls ? 's' : ''}://localhost:9060`,
-          proxyOptions: {
-              changeOrigin: false  //pass the Host header to the backend unchanged  https://github.com/Browsersync/browser-sync/issues/430
-          }
+        proxyOptions: {
+          changeOrigin: false  //pass the Host header to the backend unchanged  https://github.com/Browsersync/browser-sync/issues/430
+        }
       },
       socket: {
         clients: {

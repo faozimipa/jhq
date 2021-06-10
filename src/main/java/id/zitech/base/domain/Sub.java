@@ -1,4 +1,5 @@
 package id.zitech.base.domain;
+
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import javax.json.bind.annotation.JsonbTransient;
 import io.quarkus.runtime.annotations.RegisterForReflection;
@@ -7,6 +8,8 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
+import java.util.List;
+import io.quarkus.panache.common.Page;
 
 /**
  * A Sub.
@@ -30,12 +33,13 @@ public class Sub extends PanacheEntityBase implements Serializable {
     @Column(name = "code", nullable = false, unique = true)
     public String code;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     @JsonbTransient
     public Category category;
 
-    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not
+    // remove
 
     @Override
     public boolean equals(Object o) {
@@ -55,10 +59,7 @@ public class Sub extends PanacheEntityBase implements Serializable {
 
     @Override
     public String toString() {
-        return "Sub{" +
-            "id=" + id +
-            ", subName='" + subName + "'" +
-            ", code='" + code + "'" +
-            "}";
+        return "Sub{" + "id=" + id + ", subName='" + subName + "'" + ", code='" + code + "'" + "}";
     }
+
 }

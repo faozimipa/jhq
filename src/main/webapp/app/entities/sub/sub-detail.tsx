@@ -10,7 +10,7 @@ import { getEntity } from './sub.reducer';
 import { ISub } from 'app/shared/model/sub.model';
 import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 
-export interface ISubDetailProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
+export interface ISubDetailProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> { }
 
 export const SubDetail = (props: ISubDetailProps) => {
   useEffect(() => {
@@ -40,7 +40,7 @@ export const SubDetail = (props: ISubDetailProps) => {
           <dt>
             <Translate contentKey="zitechApp.sub.category">Category</Translate>
           </dt>
-          <dd>{subEntity.categoryId ? subEntity.categoryId : ''}</dd>
+          <dd>{subEntity.categoryId ? subEntity.categoryName : ''}</dd>
         </dl>
         <Button tag={Link} to="/sub" replace color="info">
           <FontAwesomeIcon icon="arrow-left" />{' '}

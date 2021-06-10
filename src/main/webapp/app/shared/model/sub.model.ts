@@ -3,6 +3,7 @@ export interface ISub {
   subName?: string;
   code?: string;
   categoryId?: number;
+  categoryName?: string;
 }
 
 export const defaultValue: Readonly<ISub> = {};

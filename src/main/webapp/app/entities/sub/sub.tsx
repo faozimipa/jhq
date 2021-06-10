@@ -105,7 +105,7 @@ export const Sub = (props: ISubProps) => {
                   </td>
                   <td>{sub.subName}</td>
                   <td>{sub.code}</td>
-                  <td>{sub.categoryId ? <Link to={`category/${sub.categoryId}`}>{sub.categoryId}</Link> : ''}</td>
+                  <td>{sub.categoryId ? <Link to={`category/${sub.categoryId}`}>{sub.categoryName}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${sub.id}`} color="info" size="sm">

@@ -1,6 +1,5 @@
 package id.zitech.base.service.dto;
 
-
 import io.quarkus.runtime.annotations.RegisterForReflection;
 import javax.validation.constraints.*;
 import java.io.Serializable;
@@ -11,7 +10,7 @@ import java.util.Objects;
  */
 @RegisterForReflection
 public class SubDTO implements Serializable {
-    
+
     public Long id;
 
     public String subName;
@@ -20,6 +19,7 @@ public class SubDTO implements Serializable {
     public String code;
 
     public Long categoryId;
+    public String categoryName;
 
     @Override
     public boolean equals(Object o) {
@@ -40,11 +40,7 @@ public class SubDTO implements Serializable {
 
     @Override
     public String toString() {
-        return "SubDTO{" +
-            "id=" + id +
-            ", subName='" + subName + "'" +
-            ", code='" + code + "'" +
-            ", categoryId=" + categoryId +
-            "}";
+        return "SubDTO{" + "id=" + id + ", subName='" + subName + "'" + ", code='" + code + "'" + ", categoryId="
+                + categoryId + "}";
     }
 }
