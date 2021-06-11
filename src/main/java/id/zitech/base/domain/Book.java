@@ -1,4 +1,5 @@
 package id.zitech.base.domain;
+
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import javax.json.bind.annotation.JsonbTransient;
 import io.quarkus.runtime.annotations.RegisterForReflection;
@@ -23,7 +24,7 @@ public class Book extends PanacheEntityBase implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     public Long id;
 
-    @Column(name = "title")
+    @Column(name = "title", nullable = false)
     public String title;
 
     @NotNull
@@ -42,7 +43,8 @@ public class Book extends PanacheEntityBase implements Serializable {
     @Column(name = "city", nullable = false)
     public String city;
 
-    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not
+    // remove
 
     @Override
     public boolean equals(Object o) {
@@ -62,13 +64,7 @@ public class Book extends PanacheEntityBase implements Serializable {
 
     @Override
     public String toString() {
-        return "Book{" +
-            "id=" + id +
-            ", title='" + title + "'" +
-            ", isbn=" + isbn +
-            ", author='" + author + "'" +
-            ", publisher='" + publisher + "'" +
-            ", city='" + city + "'" +
-            "}";
+        return "Book{" + "id=" + id + ", title='" + title + "'" + ", isbn=" + isbn + ", author='" + author + "'"
+                + ", publisher='" + publisher + "'" + ", city='" + city + "'" + "}";
     }
 }
